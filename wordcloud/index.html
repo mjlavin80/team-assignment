@@ -39,8 +39,13 @@
             
 			<!-- put stuff between these-->
 			
+			<img src = "cloud.png" alt = "word cloud" align = "middle">
 			
-			
+			<h2> Artist Statement </h2>
+			<p>My contribution to this assignment was a word cloud, generated from the last statements of executed inmates, located <a href = "http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html">here.</a> Data was first scraped using the Google Chrome extension <a href = "https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd?hl=en">Scraper</a>, which extracted the URLs to each last statement page. Because the last statement on each page was given in plaintext embedded in the HTML page source, I then used <a href = "http://openrefine.org/">OpenRefine</a>, a free data cleaning/wrangling tool, to extract the page sources of each URL, and then trim each page down until only the text of the last statement remained. Out of 541 executions, 110 were omitted from the analysis as their last statement text was either "None", or "Offender declined to make a last statement". I moved the remaining statements into one file, then did a final manual pass using find/replace to catch any missed HTML formatting tags.</p>
+			<p>The cloud was generated using Andreas Mueller's <a href = "https://github.com/amueller/word_cloud"> word_cloud</a>library. I chose this library because of its compatibility with Jupyter Notebooks, as well as having a wide range of customization options. The more frequently a word appears in the file of last words, the larger/bolder it is. Word color is determined from a provided <a href = "https://matplotlib.org/examples/color/colormaps_reference.html">colormap</a> and has no correlation to word frequency. </p>
+			<p>Examining this word cloud, some interesting trends emerge. The largest word, showing up 843 times, was "love". Following that was "know", at 368 times, then "family" and "love" at 355 times. Out of the hundreds of words in the cloud, there are only a few ("warden", "death", "execution", "victim", "killing") that hint at the morbid nature of the source text. </p>
+			<p>Quantifying people will always, to some degree, remove us from their humanity. I wanted to create a visualization that tried to counter that effect, by making us confront the fact that these people who were executed were still human beings, regardless of crimes committed or guilt/innocence. This word cloud gives us a glimpse into the minds of those about to face death, and the statements they decided to leave the world with. While I'm sure there are individual exceptions within the last statements, the overview of the data suggests a surprisingly human mindset. The people on death row are there as a result of crimes ordinary people are horrified to even imagine, and yet their final thoughts reveal that like ordinary people, they too think of love and religion in their final moments.</p>
 			
 			
 			<!-- ends space for stuff-->
